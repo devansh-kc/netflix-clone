@@ -1,0 +1,36 @@
+.page {
+  background-color: black;
+  /* padding: 30px auto; */
+}
+.page__data {
+  display: flex;
+  width: 90%;
+}
+
+.contents {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  margin-bottom: 160px;
+  text-align: left;
+}
+.contents > h2 {
+  font-size: 48px;
+}
+
+.contents > p {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.images > img {
+  display: flex;
+  /* width: 100%; */
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+
+  /* margin: 90px 0px; */
+}

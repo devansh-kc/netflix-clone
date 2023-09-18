@@ -1,0 +1,36 @@
+.container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between logo and nav */
+  align-items: center; /* Center vertically */
+  padding: 15px 48px; /* Add some padding for spacing */
+  margin: 0px 112px;
+}
+
+.container > img {
+  width: 10rem;
+}
+.container__details {
+  margin: 20px;
+}
+.container__details > select {
+  padding: 6px 36px;
+  border-radius: 9px;
+  background-color: transparent;
+  color: white;
+  margin: 20px;
+
+  font-size: 14px;
+}
+.container__details > select > option {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+.container__details > button {
+  background-color: #e50914;
+  color: white;
+  padding: 9px 16px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}

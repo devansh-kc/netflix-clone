@@ -5,14 +5,13 @@ import Row from "./Row";
 import Banner from "./Banner";
 import requests from "./requests";
 import Nav from "./Nav";
-import Navbar from "./LoginScreen/Navbar";
-import Banner2 from "./LoginScreen/Banner2";
+import LandingPage from "./LandingPage/LandingPage";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import SignIn from "./LandingPage/Navbar/Login/SignIn";
 
-function App() {
+function Main() {
   return (
-    <div className="app">
-      {/* <Navbar />
-      <Banner2 /> */}
+    <>
       <Nav />
       <Banner />
       <Row
@@ -26,6 +25,20 @@ function App() {
       <Row title="Horror" fetchUrl={requests.fetchHorrorMovies} />
       <Row title="Romance" fetchUrl={requests.fetchRomanceMovies} />
       <Row title="Documentries" fetchUrl={requests.fetchDocumentaries} />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <div className="app">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<SignIn />} />
+          <Route path="/maincontent" element={<Main />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
